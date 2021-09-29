@@ -6,7 +6,7 @@
 /*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 09:53:32 by sehee             #+#    #+#             */
-/*   Updated: 2021/09/29 17:13:37 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/29 20:02:20 by sehee            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ typedef struct s_data
 	int		acquired_coins;
 	int		total_coin;
 	int		finish_flag;
-	t_image	images[18];	
+	t_image	images[19];	
 }				t_data;
 
 /*check_and_parse_map_bonus, check_and_parse_map2_bonus*/

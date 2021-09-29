@@ -6,13 +6,13 @@
 /*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 11:27:36 by sehee             #+#    #+#             */
-/*   Updated: 2021/09/29 19:33:18 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/29 20:06:44 by sehee            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../../includes/so_long.h"
 
-int	update_exit_images(t_data *data)
+int	render_exit_images(t_data *data)
 {
 	if (data->acquired_coins == data->total_coin \
 		&& data->map[data->position_y][data->position_x] == 'E')

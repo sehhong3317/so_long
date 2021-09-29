@@ -6,7 +6,7 @@
 /*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 18:40:08 by sehee             #+#    #+#             */
-/*   Updated: 2021/09/29 19:32:36 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/29 20:02:54 by sehee            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,5 @@ int	deal_with_keys(int key_num, t_data *data)
 int	deal_with_close_button(t_data *data)
 {
 	print_error_and_exit(E_EXIT, *data);
+	return (0);
 }

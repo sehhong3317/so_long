@@ -6,13 +6,13 @@
 /*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 17:00:33 by sehee             #+#    #+#             */
-/*   Updated: 2021/09/29 19:30:17 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/29 19:57:02 by sehee            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char const *s2)
 {
 	char	*ret;
 	size_t	s1_len;

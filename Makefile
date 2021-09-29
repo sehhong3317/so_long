@@ -6,7 +6,7 @@
 #    By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/29 19:01:40 by sehee             #+#    #+#              #
-#    Updated: 2021/09/29 19:27:03 by sehee            ###   ########seoul.kr   #
+#    Updated: 2021/09/29 20:00:37 by sehee            ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ endif
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDE) -I$(LIBMLX_DIR) -I$(LIBFT_DIR) -c $< -o $@
 
 $(NAME) : $(LIBFT) $(LIBMLX) $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDE) -L$(LIBFT_DIR) -l$(LIBFT_NAME) \
