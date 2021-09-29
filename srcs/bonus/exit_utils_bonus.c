@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_utils.c                                       :+:      :+:    :+:   */
+/*   exit_utils_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:52:02 by sehhong           #+#    #+#             */
-/*   Updated: 2021/09/29 19:31:58 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/29 16:02:27 by sehee            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./../../includes/so_long.h"
+#include "./../../includes/so_long_bonus.h"
 
 void	free_allocated_map(t_data *data)
 {
@@ -77,7 +77,7 @@ void	print_error_messages(int error_num)
 
 void	print_error_and_exit(int error_num, t_data data)
 {
-	if (error_num == 0)
+	if (error_num == E_EXIT)
 	{
 		free_allocated_map(&data);
 		mlx_destroy_window(data.connect_id, data.window_id);

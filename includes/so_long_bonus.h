@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/27 19:59:15 by sehhong           #+#    #+#             */
-/*   Updated: 2021/09/29 19:27:55 by sehee            ###   ########seoul.kr  */
+/*   Created: 2021/09/29 09:53:32 by sehee             #+#    #+#             */
+/*   Updated: 2021/09/29 17:13:37 by sehee            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 # define E_EXIT				0
 # define E_NO_MAP			1
 # define E_EXTRA_ARG		2
@@ -32,14 +32,14 @@
 # define KEY_UP				13
 # define KEY_ESC			53
 # define PRESS_KEY_EVENT	2
-# define PRESS_EXIT_BUTTON	17		
+# define PRESS_EXIT_BUTTON	17
 
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
 # include "mlx.h"
-# include "libft.h"
 # include "get_next_line.h"
+# include "libft.h"
 
 typedef struct s_map
 {
@@ -74,7 +74,7 @@ typedef struct s_data
 	t_image	images[18];	
 }				t_data;
 
-/*check_and_parse_map, check_and_parse_map2*/
+/*check_and_parse_map_bonus, check_and_parse_map2_bonus*/
 void	check_map_extension(char *str, t_data data);
 void	read_1st_line_of_map(int fd, char **line, t_data *data);
 void	check_map_size(char *map_str, t_data *data);
@@ -86,26 +86,29 @@ void	inspect_map_details(t_data *data);
 void	add_enemy_on_map(t_data *data);
 void	check_and_parse_map(int argc, char **argv, t_data *data);
 
-/*exit_utils*/
+/*exit_utils_bonus*/
 void	free_allocated_map(t_data *data);
 void	destroy_images(t_data *data);
 void	print_error_messages(int error_num);
 void	print_error_and_exit(int error_num, t_data data);
 void	print_syscall_error_and_exit(char *error_str);
 
-/*upload_images*/
+/*upload_images_bonus*/
 void	upload_images1(t_data *data);
 void	upload_images2(t_data *data);
 void	upload_images3(t_data *data);
 void	upload_images(t_data *data);
 
-/*render_total_window*/
+/*render_total_window_bonus, render_total_window2_bonus*/
+void	render_rotating_coins(t_data data, int i, int j);
+void	render_crackling_enemy(t_data data, int i, int j);
 int		render_exit_images(t_data *data);
 void	render_the_default_map(t_data *data, int i, int j);
 void	render_player_image(t_data *data);
+void	render_steps_on_window(t_data *data);
 int		render_total_window(t_data *data);
 
-/*mlx_hook_functions*/
+/*mlx_hook_functions_bonus*/
 void	move_player_based_on_keys(int key_num, t_data *data);
 int		deal_with_keys(int key_num, t_data *data);
 int		deal_with_close_button(t_data *data);

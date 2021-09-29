@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_and_parse_map.c                              :+:      :+:    :+:   */
+/*   check_and_parse_map_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 12:39:17 by sehhong           #+#    #+#             */
-/*   Updated: 2021/09/29 19:31:25 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/29 16:01:25 by sehee            ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./../../includes/so_long.h"
+#include "./../../includes/so_long_bonus.h"
 
 void	check_map_extension(char *str, t_data data)
 {
