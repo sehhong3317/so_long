@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_and_parse_map2_bonus.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 15:35:21 by sehee             #+#    #+#             */
-/*   Updated: 2021/09/29 15:38:18 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/30 10:15:30 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ void	add_enemy_on_map(t_data *data)
 				data->map[i][j] = 'V';
 			j++;
 		}
+		i++;
 	}
 }
 

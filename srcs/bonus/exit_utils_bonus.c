@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit_utils_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:52:02 by sehhong           #+#    #+#             */
-/*   Updated: 2021/09/29 16:02:27 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/30 11:13:35 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,15 @@ void	print_error_messages(int error_num)
 			2);
 	else if (error_num == E_WRONG_LENGTH)
 		ft_putstr_fd("Error\nMap Error: Length of the map has to be at least 4\
-			.\n", 2);
+.\n", 2);
 	else if (error_num == E_WRONG_WALL)
 		ft_putstr_fd("Error\nMap Error: The map must be surrouned by walls.\n"\
 			, 2);
 	else if (error_num == E_WRONG_CHAR)
 		ft_putstr_fd("Error\nMap Error: Invalid character is in the map.\n", 2);
 	else if (error_num == E_MIN_ELEMENT)
-		ft_putstr_fd("Error\nMap Error: At least one character for each element\
-			 is needed.\n", 2);
+		ft_putstr_fd("Error\nMap Error: At least one character \
+for each element is needed.\n", 2);
 	else if (error_num == E_CONNECT_FAIL)
 		ft_putstr_fd("Error\nConnection has failed.\n", 2);
 	else if (error_num == E_NO_WINDOW)
@@ -90,8 +90,8 @@ void	print_error_and_exit(int error_num, t_data data)
 		free_allocated_map(&data);
 		if (error_num == E_NO_WINDOW)
 			mlx_destroy_window(data.connect_id, data.window_id);
-		exit(EXIT_FAILURE);
 	}
+	exit(EXIT_FAILURE);
 }
 
 void	print_syscall_error_and_exit(char *error_str)

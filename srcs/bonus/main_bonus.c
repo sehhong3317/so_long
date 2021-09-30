@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 09:53:04 by sehee             #+#    #+#             */
-/*   Updated: 2021/09/29 16:04:33 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/30 10:44:44 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./../../includes/so_long_bonus.h"
+#include "so_long_bonus.h"
 
 void	initialize_data(t_data *data)
 {

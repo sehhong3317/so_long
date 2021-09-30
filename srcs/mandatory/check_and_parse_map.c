@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_and_parse_map.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 12:39:17 by sehhong           #+#    #+#             */
-/*   Updated: 2021/09/29 19:31:25 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/09/30 11:10:18 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ void	read_1st_line_of_map(int fd, char **line, t_data *data)
 		print_syscall_error_and_exit("Format of the map is invalid.");
 	data->width = ft_strlen(*line);
 	data->height++;
-	free(line);
-	line = NULL;
+	if (*line)
+		free(*line);
+	*line = NULL;
 }
 
 void	check_map_size(char *map_str, t_data *data)
@@ -48,6 +49,8 @@ void	check_map_size(char *map_str, t_data *data)
 	read_1st_line_of_map(map_fd, &line, data);
 	while ((get_next_line(map_fd, &line)) >= 0)
 	{
+		if (ft_strlen(line) == 0)
+			break ;
 		if (ft_strlen(line) != (size_t)data->width)
 			print_error_and_exit(E_WRONG_WIDTH, *data);
 		data->height++;
@@ -78,8 +81,6 @@ void	allocate_map_memory(char *map_str, t_data *data)
 	{
 		get_next_line(map_fd, &line);
 		data->map[idx] = line;
-		free(line);
-		line = NULL;
 		idx++;
 	}
 	close(map_fd);
