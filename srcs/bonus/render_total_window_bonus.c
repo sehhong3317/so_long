@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_total_window_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sehee <sehee@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 11:27:55 by sehee             #+#    #+#             */
-/*   Updated: 2021/09/29 16:03:51 by sehee            ###   ########seoul.kr  */
+/*   Updated: 2021/10/05 13:41:48 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@ void	render_rotating_coins(t_data data, int i, int j)
 {
 	static int		cnt;
 
-	if (cnt == 900)
+	if (cnt == 300)
 		cnt = 0;
-	if (cnt < 150)
+	if (cnt < 50)
 		mlx_put_image_to_window(data.connect_id, data.window_id, \
 			data.images[1].image_id, 64 * i, 64 * j);
-	else if (cnt >= 150 && cnt < 300)
+	else if (cnt >= 50 && cnt < 100)
 		mlx_put_image_to_window(data.connect_id, data.window_id, \
 			data.images[2].image_id, 64 * i, 64 * j);
-	else if (cnt >= 300 && cnt < 450)
+	else if (cnt >= 100 && cnt < 150)
 		mlx_put_image_to_window(data.connect_id, data.window_id, \
 			data.images[13].image_id, 64 * i, 64 * j);
-	else if (cnt >= 450 && cnt < 600)
+	else if (cnt >= 150 && cnt < 200)
 		mlx_put_image_to_window(data.connect_id, data.window_id, \
 			data.images[14].image_id, 64 * i, 64 * j);
-	else if (cnt >= 600 && cnt < 750)
+	else if (cnt >= 200 && cnt < 250)
 		mlx_put_image_to_window(data.connect_id, data.window_id, \
 			data.images[15].image_id, 64 * i, 64 * j);
 	else

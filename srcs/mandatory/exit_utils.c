@@ -6,7 +6,7 @@
 /*   By: sehhong <sehhong@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:52:02 by sehhong           #+#    #+#             */
-/*   Updated: 2021/09/30 11:13:51 by sehhong          ###   ########.fr       */
+/*   Updated: 2021/10/05 13:28:49 by sehhong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ for each element is needed.\n", 2);
 
 void	print_error_and_exit(int error_num, t_data data)
 {
-	if (error_num == 0)
+	if (error_num == E_EXIT)
 	{
 		free_allocated_map(&data);
 		mlx_destroy_window(data.connect_id, data.window_id);
